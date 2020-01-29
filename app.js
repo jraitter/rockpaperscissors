@@ -1,13 +1,15 @@
 let playerWinCount = 0;
 let compWinCount = 0;
-let outcome = "no winner";
+let compChoice = " waiting to play";
+let outcome = "no winner yet";
 let outcomeElem = document.getElementById("outcome");
+let computerChoiceElem = document.getElementById("computer-choice");
 let playerCountElem = document.getElementById("player-count");
 let computerCountElem = document.getElementById("computer-count");
 
 function play(playerChoice) {
   console.log("player choice: ", playerChoice);
-  let compChoice = computerChoice();
+  compChoice = computerChoice();
   console.log("computer chose: ", compChoice)
 
   //quick answer
@@ -34,7 +36,7 @@ function play(playerChoice) {
           playerWinCount++;
         } else {
           //computer wins
-          outcome = "You lose: rock beats paper";
+          outcome = "You lose: scissors beats paper";
           compWinCount++;
         }
       } else
@@ -69,6 +71,7 @@ function computerChoice() {
 
 function drawGame() {
   outcomeElem.textContent = outcome;
+  computerChoiceElem.textContent = compChoice;
   playerCountElem.textContent = playerWinCount.toString();
   computerCountElem.textContent = compWinCount.toString();
 }
