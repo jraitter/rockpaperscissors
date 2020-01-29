@@ -15,16 +15,30 @@
 </head>
 
 <body>
-  <header class="container-fluid">
+  <header class="container">
     <div class="row bg-dark">
       <h1 class="col-12 text-info text-center">Rock Paper Scissors Game</h1>
     </div>
   </header>
 
-  <main class="container-fluid">
+  <main class="container">
     <div class="row">
       <div class="col-12">
+        <div class="card">
 
+          <div class="card-body">
+            <h5 class="card-title d-inline">Game Play:</h5>
+            <span class="card-text">Choose from one of the buttons to play against the computer.
+            </span><br /><br />
+            <h5><span id="outcome"></span> </h5>
+            <br />
+            <h5>Player Win Count: <span id="player-count"></span> </h5>
+            <h5>Computer Win Count: <span id="computer-count"></span> </h5>
+            <button type="button" class="btn btn-primary" onclick="play('rock')">Rock</button>
+            <button type="button" class="btn btn-primary" onclick="play('paper')">Paper</button>
+            <button type="button" class="btn btn-primary" onclick="play('scissors')">Scissors</button>
+          </div>
+        </div>
 
       </div>
     </div>
